@@ -8,36 +8,39 @@ public:
 	// Constructor
 	String();
 	String(const char*);
-	//String(const String&);
+	String(const String&);
 
 	// Destructor
 	~String();
 
 	// Getter 
-	char* get();
+	char* get() const;
 
 	// Get length
-	int length();
+	int length() const;
 	// Overloaded length function 
-	int length(const char*);
+	static int length(const char*);
+	static int length(const String&);
 
 	// Copy 
-	void copy(const char*);
-	void copy(const char);
+	String copy(const char*);
+	String copy(const String&);
 
 	// Split
 	String** split(const char);
 
 	// Cat 
-	void cat(const char*);
-	void cat(const char);
+	String cat(const char*);
+	String cat(const char);
+	String cat(const String&);
 
 	// Compare 
 	int compare(const char*);
+	int compare(const String&);
 
 	// uppercase
-	void toUppercase();
+	String toUppercase();
 
 	// lowercase
-	void toLowercase();
+	String toLowercase();
 };
