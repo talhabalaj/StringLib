@@ -13,15 +13,14 @@ String lastName = "Balaj";
 In above statements, I have created two instances of my String Class.
 
 ### Getter 
-
+Printing the String requires you call `.get()` on the object, because currently it doesn't have any operator overloading. 
 ```cpp
 // Getting the string and print
 cout << firstName.get() << " " <<  lastName.get() << endl;
 ```
 ### Copying
-Printing the String requires you call `.get()` on the object, because currently it doesn't have any operator overloading. 
+Copying another value to String, returns the same object so you can call get() on it.
 ```cpp
-// Copying another value to String, returns the same object so you can call get() on it.
 cout << firstName.copy("Bilal").get() << endl;
 cout << lastName.copy("Ahmed").get() << endl;
 ```
