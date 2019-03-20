@@ -4,7 +4,7 @@
 using namespace std;
 
 String::String() {
-	String("");
+	copy("");
 }
 
 String::String(const char* arg) {
@@ -192,4 +192,16 @@ String String::toUppercase() {
 		}
 	}
 	return *this;
+}
+
+String operator+(const String& o1, const String& o2) {
+	String t("");
+	t.cat(o1);
+	t.cat(o2);
+	return t;
+}
+
+ostream& operator<<(ostream& printer, const String& o2) {
+	printer << o2.get();
+	return printer;
 }

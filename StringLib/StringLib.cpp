@@ -41,5 +41,8 @@ int main() {
 	cout << String::length(lastName) << endl; // prints length of lastName
 	cout << String::length("Hello") << endl;
 
+	firstName.copy("Talha");
+	lastName.copy("Balaj");
+	cout << firstName << lastName;
 	return 0; 
 }

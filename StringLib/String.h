@@ -43,4 +43,8 @@ public:
 
 	// lowercase
 	String toLowercase();
+
+	// Operator Overloading
+	friend String operator+(const String&, const String&);
+	friend ostream& operator<<(ostream&, const String&);
 };
