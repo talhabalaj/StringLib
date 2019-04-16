@@ -47,4 +47,5 @@ public:
 	// Operator Overloading
 	friend String operator+(const String&, const String&);
 	friend ostream& operator<<(ostream&, const String&);
+	friend istream& operator>>(istream&, String&);
 };

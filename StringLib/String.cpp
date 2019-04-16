@@ -202,6 +202,14 @@ String operator+(const String& o1, const String& o2) {
 }
 
 ostream& operator<<(ostream& printer, const String& o2) {
-	printer << o2.get();
+	printer << o2.storage;
 	return printer;
+}
+
+istream& operator>>(istream& input, String& o2) {
+	char* temp = new char[100];
+	input >> temp;
+	o2.copy(temp);
+	delete temp;
+	return input;
 }
